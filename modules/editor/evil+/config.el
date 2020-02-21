@@ -32,3 +32,5 @@
   (interactive)
   (evil-ex-nohighlight)
   (save-buffer))
+
+(define-key key-translation-map (kbd "ESC") (kbd "C-g"))
