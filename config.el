@@ -9,5 +9,7 @@
 
 (setq org-directory "~/org/")
 
+(+global-word-wrap-mode +1)
+
 (setq display-line-numbers-type t)
 

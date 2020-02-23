@@ -26,7 +26,11 @@
   :i "A-L" #'sp-backward-barf-sexp
   :i "A-H" #'sp-backward-slurp-sexp
   :i "A-h" #'sp-forward-barf-sexp
-  :i "A-l" #'sp-forward-slurp-sexp)
+  :i "A-l" #'sp-forward-slurp-sexp
+
+  :leader
+
+  :desc "Previous Buffer" "/" #'mb/switch-to-previous-buffer)
 
 (defun mb/evil-n-ret ()
   (interactive)

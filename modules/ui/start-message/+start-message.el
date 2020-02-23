@@ -43,4 +43,6 @@
   (nth (random (length *code-quotes*)) *code-quotes*))
 
 (setq-default initial-scratch-message
-              (concat (mb/fortune) "\n\n"))
+  (concat "// " (mb/fortune) "\n\n"))
+
+(setq initial-major-mode 'js2-jsx-mode)

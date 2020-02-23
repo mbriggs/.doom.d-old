@@ -1,6 +1,11 @@
 ;;; ui/editing/autoload.el -*- lexical-binding: t; -*-
 
 ;;;###autoload
+(defun mb/switch-to-previous-buffer ()
+  (interactive)
+  (switch-to-buffer (other-buffer (current-buffer) 1)))
+
+;;;###autoload
 (defun mb/scroll-down-line ()
   (interactive)
   (dotimes (i 3)

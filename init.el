@@ -14,6 +14,10 @@
 ;;      Alternatively, press 'gd' (or 'C-c g d') on a module to browse its
 ;;      directory (for easy access to its source code).
 
+
+(setq doom-localleader-key "SPC j")
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 (doom! :input
        ;;chinese
        ;;japanese
@@ -85,6 +89,9 @@
        ;; term              ; terminals in Emacs
        vterm             ; another terminals in Emacs
 
+       ; local
+       ;; vterm+
+
        :checkers
        syntax              ; tasing you for every semicolon you forget
        spell             ; tasing you for misspelling mispelling
@@ -116,6 +123,7 @@
        ; local
        gist
        mongo
+       slack
        open-github
 
        :lang
