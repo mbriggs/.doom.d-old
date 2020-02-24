@@ -4,9 +4,10 @@
   :n "L" #'mb/end-of-line
   :n "H" #'mb/start-of-line
 
-  :n "C-j" #'other-window
+  :ni "C-j" #'other-window
 
   :n "RET" #'mb/evil-n-ret
+  :n "<down>" #'ivy-occur-next-error
 
   ;; insert
 
