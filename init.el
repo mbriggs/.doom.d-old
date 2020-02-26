@@ -15,7 +15,6 @@
 ;;      directory (for easy access to its source code).
 
 
-(setq doom-localleader-key "SPC j")
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (doom! :input
@@ -26,7 +25,7 @@
        company           ; the ultimate code completion backend
        ;;helm              ; the *other* search engine for love and life
        ;;ido               ; the other *other* search engine...
-       (ivy +prescient)  ; a search engine for love and life
+       ivy  ; a search engine for love and life
 
        :ui
        ;;deft              ; notational velocity for Emacs
@@ -125,6 +124,7 @@
        mongo
        slack
        open-github
+       ediff
 
        :lang
        ;;agda              ; types of types of types of types...
