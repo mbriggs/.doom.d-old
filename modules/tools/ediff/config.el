@@ -2,4 +2,4 @@
 
 (map!
   (:map ediff-mode-map
-    "B" #'+ediff--copy-both-to-C))
+    "B" #'+ediff/copy-both-to-C))
