@@ -36,6 +36,10 @@
 (defun mb/evil-n-ret ()
   (interactive)
   (evil-ex-nohighlight)
-  (save-buffer))
+  (save-buffer)
+  (+workspace/display))
+
+(advice-add '+workspace:switch-next :after #'+workspace/display)
+(advice-add '+workspace:switch-previous :after #'+workspace/display)
 
 (define-key key-translation-map (kbd "ESC") (kbd "C-g"))
