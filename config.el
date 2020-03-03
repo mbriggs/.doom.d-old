@@ -18,7 +18,7 @@
 
 (setq prescient-filter-method '(literal initialism))
 ;; (setq company-dabbrev-downcase 0)
-(setq company-idle-delay 0.01)
+(setq company-idle-delay 0.5)
 
 (setq display-line-numbers-type t)
 
