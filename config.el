@@ -8,8 +8,8 @@
     (if (not env) 1
       (string-to-number env))))
 
-(setq doom-font (font-spec :family "Fira Mono" :size (* 18 RETINA_SCALE)))
-(setq doom-big-font (font-spec :family "Fira Mono" :size (* 24 RETINA_SCALE)))
+(setq doom-font (font-spec :family "JetBrains Mono" :size (* 18 RETINA_SCALE)))
+(setq doom-big-font (font-spec :family "JetBrains Mono" :size (* 24 RETINA_SCALE)))
 (setq doom-theme 'doom-one)
 
 (setq org-directory "~/org/")
