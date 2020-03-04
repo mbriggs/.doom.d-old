@@ -1,4 +1,5 @@
-;;; tools/testing/init.el -*- lexical-binding: t; -*-
+;;; tools/testing/config.el -*- lexical-binding: t; -*-
+
 
 (map! (:map tide-mode-map
         :localleader
