@@ -89,7 +89,7 @@
        vterm             ; another terminals in Emacs
 
        ; local
-       ;; vterm+
+       vterm+
 
        :checkers
        syntax              ; tasing you for every semicolon you forget

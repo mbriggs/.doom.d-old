@@ -4,7 +4,7 @@
   :n "L" #'mb/end-of-line
   :n "H" #'mb/start-of-line
 
-  :ni "C-j" #'other-window
+  :ni "M-w" #'other-window
 
   :n "RET" #'mb/evil-n-ret
   :n "<down>" #'ivy-occur-next-error
