@@ -28,7 +28,7 @@
 ;;    (t 1.4))))
 
 (defun mb-apply-doom-fonts ()
-  (let* ((size 15.0) ;(mb--preferred-font-size))
+  (let* ((size (if IS-MAC 18.0 15.0)) ;(mb--preferred-font-size))
          (big-scale 1.4) ; (mb--preferred-big-font-scale))
          (big-size (fround (* big-scale size))))
     (setq doom-font (font-spec :family "JetBrains Mono" :size size))
