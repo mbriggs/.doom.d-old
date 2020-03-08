@@ -3,13 +3,6 @@
 (setq user-full-name "Matt Briggs"
   user-mail-address "matt@mattbriggs.net")
 
-(setq RETINA_SCALE
-  (let ((env (getenv "RETINA_SCALE_FACTOR")))
-    (if (not env) 1
-      (string-to-number env))))
-
-(setq doom-font (font-spec :family "JetBrains Mono" :size (* 18 RETINA_SCALE)))
-(setq doom-big-font (font-spec :family "JetBrains Mono" :size (* 24 RETINA_SCALE)))
 (setq doom-theme 'doom-one)
 
 (setq org-directory "~/org/")

@@ -55,6 +55,7 @@
 
        ; local
        start-message
+       scaling
 
        :editor
        (evil +everywhere); come to the dark side, we have cookies
