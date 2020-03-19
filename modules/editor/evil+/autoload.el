@@ -6,6 +6,20 @@
   (switch-to-buffer (other-buffer (current-buffer) 1)))
 
 ;;;###autoload
+(defun mb/delete-trailing-blank-lines ()
+  "Deletes all blank lines at the end of the file, even the last one"
+  (interactive)
+  (save-excursion
+    (save-restriction
+      (widen)
+      (goto-char (point-max))
+      (delete-blank-lines)
+      (let ((trailnewlines (abs (skip-chars-backward "\n\t"))))
+        (if (> trailnewlines 0)
+          (progn
+            (delete-char trailnewlines)))))))
+
+;;;###autoload
 (defun mb/scroll-down-line ()
   (interactive)
   (dotimes (i 3)

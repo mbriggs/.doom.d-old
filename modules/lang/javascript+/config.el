@@ -5,8 +5,12 @@
 
 (setq tide-disable-suggestions t)
 
-(map! (:map tide-mode-map
-        :localleader
-        "p" #'prettier-js
-        "J" #'mb/tide-local
-        "m" #'tide-fix))
+(map!
+  (:map tide-mode-map
+    :localleader
+    "p" #'prettier-js
+    "J" #'mb/tide-local
+    "m" #'tide-fix)
+  (:map web-mode-map
+    :localleader
+    "p" #'prettier-js))

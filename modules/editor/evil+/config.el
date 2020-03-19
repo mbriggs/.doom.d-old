@@ -4,34 +4,28 @@
   :n "L" #'mb/end-of-line
   :n "H" #'mb/start-of-line
 
-  :ni "M-w" #'other-window
-
   :n "RET" #'mb/evil-n-ret
-  :n "<down>" #'ivy-occur-next-error
+
+  :ni "M-k" #'sp-kill-sexp
+  :ni "M-K" #'sp-splice-sexp
 
   ;; insert
 
   :i "M-<left>" #'mb/start-of-line
   :i "M-<right>" #'mb/end-of-line
-
   :i "M-<backspace>" #'mb/delete-whole-line
   :i "S-<return>" #'mb/open-line-above
   :i "M-/" #'mb/comment-or-uncomment-region-or-line
-
   :i "M-D" #'mb/duplicate-line-or-region
-
-  :i "M-d" #'mc/mark-next-like-this-word
-
-  :i "M-k" #'sp-kill-sexp
-  :i "M-K" #'sp-splice-sexp
-  :i "A-L" #'sp-backward-barf-sexp
-  :i "A-H" #'sp-backward-slurp-sexp
-  :i "A-h" #'sp-forward-barf-sexp
-  :i "A-l" #'sp-forward-slurp-sexp
 
   :leader
 
-  :desc "Previous Buffer" "/" #'mb/switch-to-previous-buffer)
+  :desc "Previous Buffer" "/" #'mb/switch-to-previous-buffer
+  (:prefix ("j" . "sexp")
+    :desc "Backward Barf" "L" #'sp-backward-barf-sexp
+    :desc "Backward Slurp" "H" #'sp-backward-slurp-sexp
+    :desc "Forward Barf" "h" #'sp-forward-barf-sexp
+    :desc "Forward Slurp" "l" #'sp-forward-slurp-sexp))
 
 (defun mb/evil-n-ret ()
   (interactive)

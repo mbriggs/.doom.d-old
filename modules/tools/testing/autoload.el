@@ -20,4 +20,4 @@
 ;;;###autoload
 (defun mb--run-test (file-name)
   (setq mb--last-test file-name)
-  (compile (concat "ts-node " file-name)))
+  (compile (concat "TS_NODE_TRANSPILE_ONLY=true ts-node -P " (projectile-project-root) "tsconfig.json -r tsconfig-paths/register " file-name)))

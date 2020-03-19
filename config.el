@@ -15,3 +15,5 @@
 
 (setq display-line-numbers-type t)
 
+(add-hook! 'snippet-mode-hook #'+yas-snippet-newline-h)
+
