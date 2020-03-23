@@ -1,16 +1,15 @@
 ;;; lang/javascript+/config.el -*- lexical-binding: t; -*-
 
-(add-hook! tide-mode 'add-node-modules-path)
-(add-hook! tide-mode (require 'prettier-js))
+(add-hook! typescript-mode 'add-node-modules-path)
+(add-hook! typescript-mode (require 'prettier-js))
 
-(setq tide-disable-suggestions t)
+(setq lsp-typescript-suggestion-actions-enabled nil)
 
 (map!
-  (:map tide-mode-map
+  (:map typescript-mode-map
     :localleader
     "p" #'prettier-js
-    "J" #'mb/tide-local
-    "m" #'tide-fix)
+    "m" #'lsp-ui-sideline-apply-code-actions)
   (:map web-mode-map
     :localleader
     "p" #'prettier-js))
