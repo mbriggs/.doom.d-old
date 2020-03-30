@@ -15,5 +15,7 @@
 
 (setq display-line-numbers-type t)
 
+(setq flycheck-display-errors-function 'flycheck-display-error-messages)
+
 (add-hook! 'snippet-mode-hook #'+yas-snippet-newline-h)
 
