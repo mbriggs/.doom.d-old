@@ -11,3 +11,9 @@
   (:map web-mode-map
     :localleader
     "p" #'prettier-js))
+
+(setq lsp-clients-typescript-log-verbosity "debug"
+      lsp-clients-typescript-plugins
+      (vector
+       (list :name "typescript-tslint-plugin"
+             :location "/usr/lib/node_modules/typescript-tslint-plugin")))

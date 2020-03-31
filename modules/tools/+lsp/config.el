@@ -40,12 +40,8 @@ WORKSPACE is the workspace that contains the diagnostics."
       (when buffer
         (save-mark-and-excursion
           (with-current-buffer buffer
-            (run-hooks 'lsp-after-diagnostics-hook))))))
+            (run-hooks 'lsp-after-diagnostics-hook)))))))
 
-  (advice-add 'lsp-flycheck-enable :after (lambda ()
-                                            (setq flycheck-display-errors-function 'flycheck-display-error-messages)
-                                            (flycheck-add-next-checker 'lsp 'typescript-tslint)))
-  )
 
 
 (setq
